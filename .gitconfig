@@ -41,9 +41,7 @@
     branch = green
 [diff]
     renames = true
-[commit]
-    template = ~/.gitcim
+#[commit]
+#    template = ~/.gitcim
 [preload]
     index = true
-[url "https://github.com/"]
-    insteadOf = git@github.com:
