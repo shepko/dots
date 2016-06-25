@@ -1,0 +1,49 @@
+[alias]
+    hist = log --graph --color=always --pretty='[%C(cyan)%h%Creset]%C(bold cyan)%d%Creset %s' --all
+    branches = for-each-ref --sort=-committerdate refs/heads/
+    br    = branch
+    ci    = commit
+    aci   = commit -a
+    co    = checkout
+    desc  = describe
+    cp    = cherry-pick
+    cl    = clone
+    sl    = stash list
+    sa    = stash apply
+    ss    = stash save
+    st    = status -sb
+    brm   = branch --merged
+    brn   = branch --no-merged
+    brmrm = branch --merged | xargs git branch -d
+    brnrm = branch --no-merged | xargs git branch -d
+    mlg   = log --oneline --decorate --author=shepko
+    alg   = log --oneline --decorate
+    df    = diff --word-diff
+    pr    = pull --rebase
+    bl    = blame -wMC
+    ds    = diff --staged
+    yes   = log --since '1 day ago' --oneline --decorate --author=shepko
+    fs    = log -S
+    gr    = grep --break --heading --line-number --show-function --context 1
+[color]
+    ui = auto
+[push]
+    default = upstream
+[user]
+    name = Alex Shepko
+    email = alex.shepko@gmail.com
+[core]
+    editor = vim
+    compression = 9
+[merge]
+    tool = vimdiff
+[color "status"]
+    branch = green
+[diff]
+    renames = true
+[commit]
+    template = ~/.gitcim
+[preload]
+    index = true
+[url "https://github.com/"]
+    insteadOf = git@github.com:
